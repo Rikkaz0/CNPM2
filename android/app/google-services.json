@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "792888586324",
+    "project_id": "datafirebase-94d8a",
+    "storage_bucket": "datafirebase-94d8a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:792888586324:android:bc39668bd890e9b919bdc1",
+        "android_client_info": {
+          "package_name": "com.example.personal.health.manager"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClt7aDBwtcP_18EL1HufFJdfkIplILLTY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
