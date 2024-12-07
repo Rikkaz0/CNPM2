@@ -1,21 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gemini/flutter_gemini.dart';
+import 'package:personal.health.manager/screens/chat_screen.dart';
 import 'package:personal.health.manager/screens/register_screen.dart';
 import 'package:personal.health.manager/screens/reset_password_screen.dart';
+import 'package:personal.health.manager/consts.dart';
 import 'screens/home_screen.dart';
 import 'screens/health_tracker_screen.dart';
-import 'screens/statistics_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'screens/login_screen.dart';
 
-Future<void> main() async {runApp(const PersonalHealthManager());
-   
+Future<void> main() async {
+  // Đảm bảo rằng Flutter đã khởi tạo
   WidgetsFlutterBinding.ensureInitialized();
+  
+  // Khởi tạo Firebase
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  // Khởi tạo Gemini
+  Gemini.init(
+    apiKey: GEMINI_API_KEY,
+  );
+  
+  // Chạy ứng dụng
   runApp(MyApp());
 }
+
 
 class PersonalHealthManager extends StatelessWidget {
   const PersonalHealthManager({super.key});
@@ -34,7 +46,7 @@ class PersonalHealthManager extends StatelessWidget {
         '/rspassword':(context) => ResetPasswordScreen(),
         '/home': (context) => HomeScreen(),
         '/health-tracker': (context) =>  HealthTrackerScreen(),
-        '/statistics': (context) => StatisticsScreen(),
+        '/statistics': (context) => ChatScreen(),
       },
     );
   }

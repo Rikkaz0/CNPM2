@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:personal.health.manager/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:personal.health.manager/screens/health_tracker_screen.dart';
-import 'package:personal.health.manager/screens/statistics_screen.dart';
+import 'package:personal.health.manager/screens/chat_screen.dart';
 import 'package:personal.health.manager/utils/color_utils.dart';
 import 'package:personal.health.manager/reusable_widgets/reusable_widget.dart';
 
@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            logoWidget("images/health.png"),
+            logoWidget("assets/health.png"),
             const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
@@ -48,9 +48,9 @@ class _HomeScreenState extends State<HomeScreen> {
             ElevatedButton(
               onPressed: () {
                 Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => StatisticsScreen()));
+                  MaterialPageRoute(builder: (context) => ChatScreen()));
               },
-              child: const Text('Statistics'),
+              child: const Text('Chat For Advice'),
             ),
             ElevatedButton(
               onPressed: () {

@@ -107,7 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 20, MediaQuery.of(context).size.height * 0.2, 20, 0),
             child: Column(
               children: <Widget>[
-                logoWidget("images/welcome.png"),
+                logoWidget("assets/welcome.png"),
                 const SizedBox(height: 30),
                 reusableTextField("Enter Email", Icons.person_outline, false, _emailTextController),
                 const SizedBox(height: 20),
@@ -132,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     backgroundColor: Colors.white,
                     radius: 25,
                     child: Image.asset(
-                      "images/google_icon.png", // Đảm bảo bạn có biểu tượng Google trong thư mục `images`
+                      "assets/google_icon.png", // Đảm bảo bạn có biểu tượng Google trong thư mục `images`
                       height: 30,
                       width: 30,
                     ),
