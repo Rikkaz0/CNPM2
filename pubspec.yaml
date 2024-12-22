@@ -30,21 +30,26 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  carp_serializable: ^2.0.0
   fl_chart: ^0.69.0 
   logger: ^1.0.0
   firebase_auth:
   firebase_core: ^3.6.0
   firebase_auth_web:
   cloud_firestore:
+  intl: ^0.19.0
+  device_info_plus: ^10.1.2
+  json_annotation: ^4.8.0
   http: ^1.0.0
+ 
   flutter_gemini: ^2.0.3
+  health: ^11.1.1
   image_picker: ^1.0.7
-  dash_chat_2: ^0.0.20
+  dash_chat_2: ^0.0.21
   flutter_dotenv: ^5.0.2
   cupertino_icons: ^1.0.8
   flutter_secure_storage: ^8.0.0
-  permission_handler: ^10.0.0
+  permission_handler: ^11.3.1
   googleapis: ^11.0.1 # Thư viện để gọi Google API
   googleapis_auth: ^1.6.0 # Thư viện xác thực Google API
   google_sign_in: ^6.2.2
@@ -66,6 +71,11 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  plugin:
+    platforms:
+      android:
+        package: cachet.plugins.health
+        pluginClass: HealthPlugin
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
